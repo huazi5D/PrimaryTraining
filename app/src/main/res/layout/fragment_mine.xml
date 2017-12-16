@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/transparent"
+              android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dip"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="我的"
+            android:textColor="@color/black"
+            android:textSize="16sp"/>
+
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dip"
+                android:background="@color/transparent">
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/cv_img"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/header"
+                    app:civ_border_color="#FF000000"
+                    android:visibility="gone"
+                    app:civ_border_width="2dp"/>
+
+
+                <TextView
+                    android:id="@+id/tv_login_register"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/login_register_bg"
+                    android:padding="8dip"
+                    android:textColor="@color/black"
+                    android:layout_centerInParent="true"
+                    android:visibility="visible"
+                    android:text="登录/注册"/>
+
+            </RelativeLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dip"
+                android:background="@color/v_line"></View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dip"
+                    android:orientation="horizontal"
+                    >
+
+                    <RelativeLayout
+                        android:id="@+id/rl_info"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:drawableTop="@mipmap/mine_info"
+                            android:drawablePadding="3dip"
+                            android:gravity="center_horizontal"
+                            android:text="个人信息"
+                            android:textColor="@color/black"/>
+
+                    </RelativeLayout>
+
+
+                    <View
+                        android:layout_width="0.1dip"
+                        android:layout_height="match_parent"
+                        android:background="@color/v_line"></View>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_modify"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:drawableTop="@mipmap/mine_modify"
+                            android:drawablePadding="3dip"
+                            android:gravity="center_horizontal"
+                            android:paddingBottom="5dip"
+                            android:paddingTop="5dip"
+                            android:text="修改密码"
+                            android:textColor="@color/black"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dip"
+                    android:background="@color/v_line"></View>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dip"
+                    android:orientation="horizontal"
+                    >
+
+                    <RelativeLayout
+                        android:id="@+id/rl_exam"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:drawableTop="@mipmap/mine_exam"
+                            android:drawablePadding="3dip"
+                            android:gravity="center_horizontal"
+                            android:text="模拟考核"
+                            android:textColor="@color/black"/>
+
+                    </RelativeLayout>
+
+
+                    <View
+                        android:layout_width="0.1dip"
+                        android:layout_height="match_parent"
+                        android:background="@color/v_line"></View>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_exam_record"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:drawableTop="@mipmap/mine_exam_record"
+                            android:gravity="center_horizontal"
+                            android:drawablePadding="3dip"
+                            android:paddingBottom="5dip"
+                            android:paddingTop="5dip"
+                            android:text="考试记录"
+                            android:textColor="@color/black"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dip"
+                    android:background="@color/v_line"></View>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dip"
+                    android:orientation="horizontal"
+                    >
+
+                    <RelativeLayout
+                        android:id="@+id/rl_study"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:drawableTop="@mipmap/mine_study_record"
+                            android:drawablePadding="3dip"
+                            android:gravity="center_horizontal"
+                            android:text="学习记录"
+                            android:textColor="@color/black"/>
+
+                    </RelativeLayout>
+
+
+                    <View
+                        android:layout_width="0.1dip"
+                        android:layout_height="match_parent"
+                        android:background="@color/v_line"></View>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_feed"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:drawableTop="@mipmap/mine_feedback"
+                            android:drawablePadding="3dip"
+                            android:gravity="center_horizontal"
+                            android:paddingBottom="5dip"
+                            android:paddingTop="5dip"
+                            android:text="投诉建议"
+                            android:textColor="@color/black"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dip"
+                    android:background="@color/v_line"></View>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dip"
+                    android:orientation="horizontal"
+                    >
+
+                    <RelativeLayout
+                        android:id="@+id/rl_call"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:drawableTop="@mipmap/mine_call"
+                            android:drawablePadding="3dip"
+                            android:gravity="center_horizontal"
+                            android:text="联系我们"
+                            android:textColor="@color/black"/>
+
+                    </RelativeLayout>
+
+
+                    <View
+                        android:layout_width="0.1dip"
+                        android:layout_height="match_parent"
+                        android:background="@color/v_line"></View>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_about"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:drawableTop="@mipmap/mine_about"
+                            android:drawablePadding="3dip"
+                            android:gravity="center_horizontal"
+                            android:paddingBottom="5dip"
+                            android:paddingTop="5dip"
+                            android:text="关于我们"
+                            android:textColor="@color/black"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dip"
+                    android:background="@color/v_line"></View>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dip"
+                    android:orientation="horizontal"
+                    >
+
+
+
+
+                    <RelativeLayout
+                        android:id="@+id/rl_device"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:drawableTop="@mipmap/mine_device"
+                            android:gravity="center_horizontal"
+                            android:text="设备信息"
+                            android:textColor="@color/black"/>
+
+                    </RelativeLayout>
+
+
+                    <View
+                        android:layout_width="0.1dip"
+                        android:layout_height="match_parent"
+                        android:background="@color/v_line"></View>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_exit"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:drawableTop="@mipmap/mine_exit"
+                            android:gravity="center_horizontal"
+                            android:text="安全退出"
+                            android:textColor="@color/black"/>
+
+                    </RelativeLayout>
+
+
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dip"
+                    android:background="@color/v_line"></View>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

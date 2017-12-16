@@ -1,0 +1,9 @@
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false">
+    <item android:drawable="@mipmap/face_close_eye1"
+        android:duration="200"></item>
+    <item android:drawable="@mipmap/face_close_eye2"
+          android:duration="200"></item>
+    <item android:drawable="@mipmap/face_close_eye3"
+          android:duration="200"></item>
+</animation-list>

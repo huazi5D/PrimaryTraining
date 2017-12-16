@@ -1,0 +1,81 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion '26.0.2'
+    defaultConfig {
+        applicationId "com.li.primary"
+        minSdkVersion 16
+        targetSdkVersion 25
+        versionCode 8
+        versionName "1.7"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+//    signingConfigs {
+//        release {
+//            keyAlias 'key0'
+//            keyPassword '111111'
+//            storeFile file('../education.jks')
+//            storePassword '111111'
+//            v2SigningEnabled true
+//        }
+//    }
+
+//    buildTypes {
+//        release {
+//            signingConfig signingConfigs.release
+//            minifyEnabled false
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//            ndk {
+//                abiFilters "armeabi"
+//            }
+//        }
+//        debug {
+//            debuggable true
+//            signingConfig signingConfigs.release
+//            ndk {
+//                abiFilters "armeabi"
+//            }
+//        }
+//    }
+
+//    sourceSets {
+//        main {
+//            jniLibs.srcDirs = ['libs']
+//        }
+//    }
+}
+
+repositories {
+    maven { url "https://jitpack.io" }
+    mavenCentral()
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:support-v4:25.0.0+'
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+    compile 'io.reactivex:rxjava:1.1.6'
+    compile 'io.reactivex:rxandroid:1.2.1'
+    compile 'com.orhanobut:logger:1.15'
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.0.2'
+    compile 'com.github.Aspsine:SwipeToLoadLayout:1.0.4'
+    compile 'com.github.jcdream.loopviewpager:library:1.2'
+    compile 'com.android.support:recyclerview-v7:25.0.0+'
+    compile 'com.github.bumptech.glide:glide:4.0.0-RC0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.0.0-RC0'
+    //导入腾讯云直播SDK jar
+    compile fileTree(include: ['*.jar'], dir: 'src/main/jniLibs')
+    //progress
+    compile 'com.pnikosis:materialish-progress:1.7'
+    //    compile files('src/main/jniLibs/txrtmpsdk.jar')
+}

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:background="@color/transparent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dip"
+        android:background="@color/white">
+
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@mipmap/back"
+            android:layout_centerVertical="true"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:text="登录"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="60dip"
+        android:paddingRight="60dip">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="75dip"
+            android:layout_height="75dip"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dip"
+            android:src="@mipmap/header"
+            app:civ_border_color="@color/black"
+            app:civ_border_width="2dip"/>
+
+
+        <TextView
+            android:id="@+id/tv_appname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dip"
+            android:layout_below="@+id/iv_logo"
+            android:text="易通教育"
+            android:textColor="@color/black"/>
+
+        <EditText
+            android:id="@+id/et_id"
+            android:layout_width="match_parent"
+            android:layout_height="40dip"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dip"
+            android:background="@drawable/login_edit"
+            android:layout_below="@+id/tv_appname"
+            android:hint="请输入身份证号"
+            android:paddingLeft="8dip"
+            android:paddingRight="8dip"
+            android:textSize="13sp"/>
+
+        <EditText
+            android:id="@+id/et_password"
+            android:layout_width="match_parent"
+            android:layout_height="40dip"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dip"
+            android:background="@drawable/login_edit"
+            android:layout_below="@+id/et_id"
+            android:inputType="textPassword"
+            android:hint="请输入密码"
+            android:paddingLeft="8dip"
+            android:paddingRight="8dip"
+            android:textSize="13sp"/>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_password"
+            android:layout_marginTop="20dip">
+
+            <Button
+                android:id="@+id/btn_login"
+                android:layout_width="wrap_content"
+                android:layout_height="30dip"
+                android:background="@drawable/modify_button"
+                android:paddingBottom="2dip"
+                android:paddingLeft="20dip"
+                android:paddingRight="20dip"
+                android:paddingTop="2dip"
+                android:text="登录"
+                android:textColor="@color/white"
+                />
+
+
+            <Button
+                android:id="@+id/btn_register"
+                android:layout_width="wrap_content"
+                android:layout_height="30dip"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/modify_button"
+                android:paddingBottom="2dip"
+                android:paddingLeft="20dip"
+                android:paddingRight="20dip"
+                android:paddingTop="2dip"
+                android:text="注册"
+                android:textColor="@color/white"
+                />
+
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/tv_forget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="20dip"
+            android:text="忘记密码？"
+            android:layout_below="@+id/rl_layout"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/tv_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dip"
+            android:layout_centerHorizontal="true"
+            android:text="400-069-0359"
+            android:textColor="@color/black"/>
+
+    </RelativeLayout>
+</LinearLayout>

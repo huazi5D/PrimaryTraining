@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:wheel="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/transparent"
+              android:keepScreenOn="true"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="45dip"
+        android:background="@color/white">
+
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:src="@mipmap/back"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="视频播放"
+            android:textColor="@color/black"
+            android:textSize="16sp"/>
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_video_layout"
+        android:layout_width="match_parent"
+        android:layout_height="220dip"
+        android:orientation="vertical">
+
+
+        <com.tencent.rtmp.ui.TXCloudVideoView
+            android:id="@+id/buffer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black"
+            android:layout_gravity="center_horizontal"/>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_controller"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@color/mediacontroller_bg"
+            android:visibility="gone"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iv_play_pause"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/mediacontroller_play"/>
+
+            <TextView
+                android:id="@+id/mediacontroller_time_current"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textColor="@color/white"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/iv_play_pause"/>
+
+            <TextView
+                android:id="@+id/mediacontroller_time_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:textColor="@color/white"
+                android:layout_toLeftOf="@+id/iv_full"/>
+
+
+            <ImageView
+                android:id="@+id/iv_full"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@mipmap/full_screen"/>
+
+            <com.li.primary.view.LfSeekBar
+                android:id="@+id/mediacontroller_seekbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/mediacontroller_time_total"
+                android:layout_toRightOf="@id/mediacontroller_time_current"
+                android:focusable="true"
+                android:max="1000"/>
+
+
+        </RelativeLayout>
+
+
+        <ImageView
+            android:id="@+id/iv_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@mipmap/play"
+            android:visibility="visible"/>
+
+
+        <com.pnikosis.materialishprogress.ProgressWheel
+            android:id="@+id/progress_wheel"
+            android:layout_width="60dip"
+            android:layout_height="60dip"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            wheel:matProg_barColor="#ffffff"
+            wheel:matProg_progressIndeterminate="true"/>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_play_next"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_play_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/play_next_bg"
+                android:padding="10dip"
+                android:text="播放下一个视频"
+                android:textColor="@color/white"/>
+
+        </RelativeLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:text="注意事项"
+            android:textColor="@color/black"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dip"
+            android:text="1、每天连续学习不能超过6小时；"
+            android:textColor="@color/black"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>

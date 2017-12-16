@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+    android:background="@color/transparent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dip"
+        android:background="@color/white">
+
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@mipmap/back"
+            android:layout_centerVertical="true"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:text="视频列表"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dip"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:drawableLeft="@mipmap/time"
+        android:drawablePadding="3dip"
+        android:text="本次总学时为720分钟，已完成学时30分钟"
+        android:gravity="center_vertical"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycle_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+
+</LinearLayout>

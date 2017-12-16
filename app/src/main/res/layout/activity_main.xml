@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/frame_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/ll_bottom"></FrameLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="50dip"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/rl_home"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+
+
+                    <TextView
+                        android:id="@+id/tv_home"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="1dip"
+                        android:textColor="#a0a0a0"
+                        android:drawableTop="@mipmap/main_home_unselect"
+                        android:drawablePadding="3dip"
+                        android:textSize="12sp"
+                        android:text="首页"/>
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rl_study"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+
+
+                    <TextView
+                        android:id="@+id/tv_study"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="1dip"
+                        android:textSize="12sp"
+                        android:textColor="#a0a0a0"
+                        android:drawablePadding="3dip"
+                        android:drawableTop="@mipmap/main_study_unselect"
+                        android:text="学习"/>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_mine"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+
+
+                    <TextView
+                        android:id="@+id/tv_mine"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="1dip"
+                        android:textColor="#a0a0a0"
+                        android:drawablePadding="3dip"
+                        android:drawableTop="@mipmap/main_mine_unselect"
+                        android:textSize="12sp"
+                        android:text="我的"/>
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dip"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/back"/>
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:maxLength="10"
+                android:ellipsize="end"
+                android:lines="1"
+                android:layout_centerInParent="true"
+                android:text=""/>
+
+        </RelativeLayout>
+
+        <com.li.primary.view.SfWebview
+            android:id="@+id/webview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:progress_show="true"
+            app:progress_drawable="@drawable/progress_bg"></com.li.primary.view.SfWebview>
+</LinearLayout>

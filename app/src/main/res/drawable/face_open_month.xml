@@ -1,0 +1,9 @@
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false">
+    <item android:drawable="@mipmap/face_open_month1"
+        android:duration="200"></item>
+    <item android:drawable="@mipmap/face_open_month2"
+          android:duration="200"></item>
+    <item android:drawable="@mipmap/face_open_month3"
+          android:duration="200"></item>
+</animation-list>

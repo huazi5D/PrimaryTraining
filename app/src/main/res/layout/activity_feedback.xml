@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dip"
+        android:background="@color/white">
+
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/back"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:text="投诉建议"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text="建议内容"
+        android:textSize="16sp"
+        android:layout_marginTop="20dip"
+        android:layout_marginLeft="10dip"/>
+
+
+    <EditText
+        android:id="@+id/et_content"
+        android:layout_width="match_parent"
+        android:layout_height="200dip"
+        android:background="@color/white"
+        android:layout_marginTop="5dip"
+        android:padding="10dip"
+        android:hint="任何对我们应用的建议，想法，遇到的问题，都欢迎反馈给我们。"
+        android:textSize="15sp"
+        android:lineSpacingMultiplier="1.3"
+        android:gravity="left|top"/>
+
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:text="提交"
+        android:background="@drawable/modify_button"
+        android:layout_marginLeft="30dip"
+        android:layout_marginRight="30dip"
+        android:textColor="@color/white"
+        android:layout_marginTop="30dip"/>
+</LinearLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/transparent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dip"
+        android:background="@color/white">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textSize="16sp"
+            android:text="章节列表"
+            android:textColor="@color/black"/>
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dip"
+        android:paddingBottom="10dip"
+        android:layout_marginLeft="10dip"
+        android:drawablePadding="5dip"
+        android:drawableLeft="@mipmap/time"
+        android:text="本次总学时为0分钟，已完成学时30分钟"
+        android:textColor="@color/black"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycle_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+    </android.support.v7.widget.RecyclerView>
+
+</LinearLayout>

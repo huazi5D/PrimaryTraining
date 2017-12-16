@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/transparent"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dip"
+        android:background="@color/white">
+
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/back"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:text="考试记录"
+            android:layout_centerInParent="true"/>
+
+
+    </RelativeLayout>
+
+
+
+    <com.aspsine.swipetoloadlayout.SwipeToLoadLayout
+        android:id="@+id/swipe_to_load_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="1dip"
+        app:swipe_style="classic">
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/swipe_target"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+
+
+        </android.support.v7.widget.RecyclerView>
+
+        <include
+            android:id="@id/swipe_load_more_footer"
+            layout="@layout/layout_classic_footer"/>
+
+
+    </com.aspsine.swipetoloadlayout.SwipeToLoadLayout>
+
+</LinearLayout>

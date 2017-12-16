@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/transparent"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dip"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="首页"
+            android:textColor="@color/black"
+            android:textSize="16sp"/>
+
+    </RelativeLayout>
+
+
+    <com.aspsine.swipetoloadlayout.SwipeToLoadLayout
+        android:id="@+id/swipe_to_load_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:swipe_style="classic">
+
+        <include
+            android:id="@id/swipe_refresh_header"
+            layout="@layout/layout_twitter_header"/>
+
+
+        <ScrollView
+            android:id="@+id/swipe_target"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <com.liu.learning.library.LoopViewPager
+                        android:id="@+id/loop_pager"
+                        android:layout_width="match_parent"
+                        android:layout_height="170dip">
+
+                    </com.liu.learning.library.LoopViewPager>
+
+                    <TextView
+                        android:id="@+id/tv_state"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@mipmap/home_mark"
+                        android:layout_below="@+id/loop_pager"
+                        android:paddingTop="5dip"
+                        android:paddingBottom="5dip"
+                        android:paddingLeft="10dip"
+                        android:drawablePadding="5dip"
+                        android:text="行业资讯"/>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recycle_view"
+                        android:layout_width="match_parent"
+                        android:layout_below="@+id/tv_state"
+                        android:layout_height="wrap_content"/>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+
+        </ScrollView>
+
+        <include
+            android:id="@id/swipe_load_more_footer"
+            layout="@layout/layout_classic_footer"/>
+
+
+    </com.aspsine.swipetoloadlayout.SwipeToLoadLayout>
+
+</LinearLayout>

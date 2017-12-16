@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="type">
+        <item>货运</item>
+        <item>客运 </item>
+        <item>危货</item>
+        <item>出租车</item>
+    </string-array>
+
+    <string-array name="type_code">
+        <item>010600</item>
+        <item>010100 </item>
+        <item>010700</item>
+        <item>010300</item>
+    </string-array>
+
+    <string-array name="cycle">
+        <item>第一阶段</item>
+        <item>第二阶段 </item>
+        <item>一周期</item>
+    </string-array>
+    <string-array name="cycle_code">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+</resources>
